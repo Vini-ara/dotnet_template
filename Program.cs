@@ -1,6 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+using template.Entities;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
+
+builder.Services.AddDbContext<AppDbContext>(opt =>
+  opt.UseInMemoryDatabase("template"));
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
