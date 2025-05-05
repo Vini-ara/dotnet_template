@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Recipes.Controllers
+namespace template.Controllers
 {
     [Route("api/example")]
     [ApiController]
